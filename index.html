@@ -1,0 +1,255 @@
+<title>1893 Macro</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+
+<style>
+/* Classical minimalist — single centred column, generous whitespace, monochrome */
+:root {
+  --bg: #ffffff;
+  --fg: #181818;
+  --fg-secondary: #5c5c5c;
+  --rule: #c8c8c8;
+  --header-bg: #181818;
+  --header-fg: #f0f0f0;
+  --font-body: 'Atkinson Hyperlegible', 'Verdana', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101010;
+    --fg: #e6e6e6;
+    --fg-secondary: #909090;
+    --rule: #2e2e2e;
+    --header-bg: #000000;
+    --header-fg: #f0f0f0;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #101010;
+  --fg: #e6e6e6;
+  --fg-secondary: #909090;
+  --rule: #2e2e2e;
+  --header-bg: #000000;
+  --header-fg: #f0f0f0;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  padding-inline: 24px;
+  padding-block: 0;
+}
+
+.page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-block: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+/* Identity — inverted block */
+header {
+  background: var(--header-bg);
+  color: var(--header-fg);
+  padding: 40px 32px;
+  margin-inline: -24px;
+}
+
+.wordmark {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--header-fg);
+  margin: 0;
+}
+
+.tagline {
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--header-fg);
+  margin: 12px 0 0;
+  max-width: 520px;
+  text-wrap: balance;
+}
+
+/* Sections */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fg-secondary);
+  margin: 0;
+}
+
+.section p {
+  margin: 0;
+}
+
+/* Research areas */
+.areas {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.area {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.area-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.area-name {
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.area-status {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-secondary);
+  border: 1px solid var(--rule);
+  padding: 2px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.area-desc {
+  font-size: 0.95rem;
+  color: var(--fg-secondary);
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* Contact */
+.contact-line {
+  margin: 0;
+}
+
+.contact-link {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: border-color 0.2s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  border-color: var(--fg);
+}
+
+/* Footer */
+.footer {
+  font-size: 0.78rem;
+  color: var(--fg-secondary);
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding-block: 56px;
+    gap: 40px;
+  }
+  header {
+    padding: 32px 24px;
+  }
+  .tagline {
+    font-size: 1.25rem;
+  }
+}
+</style>
+
+<main class="page">
+
+  <header>
+    <p class="wordmark">1893 Macro</p>
+    <p class="tagline">Research and advisory on the public services that shape everyday life.</p>
+  </header>
+
+  <section class="section">
+    <p class="section-label">About</p>
+    <p>1893 Macro is a non-profit social enterprise that conducts applied research on public and social services. Our work spans policy analysis, programme evaluation, and direct support for the professionals who deliver these services.</p>
+    <p>Our active programmes cover schooling, transit, macro investing, and technology solutions, with healthcare and housing forthcoming.</p>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Research Areas</p>
+    <div class="areas">
+      <div class="area">
+        <div class="area-header">
+          <p class="area-name">Schooling</p>
+          <span class="area-status">Active</span>
+        </div>
+        <p class="area-desc">K&#8211;12 public school policy, with secondary focus on evidence-based, research-informed teacher support and classroom practice.</p>
+      </div>
+      <div class="area">
+        <div class="area-header">
+          <p class="area-name">Transit</p>
+          <span class="area-status">Active</span>
+        </div>
+        <p class="area-desc">Public transport planning, accessibility, and regional connectivity.</p>
+      </div>
+      <div class="area">
+        <div class="area-header">
+          <p class="area-name">Macro Investing</p>
+          <span class="area-status">Active</span>
+        </div>
+        <p class="area-desc">Macroeconomic research and investment analysis for public-interest capital allocation.</p>
+      </div>
+      <div class="area">
+        <div class="area-header">
+          <p class="area-name">Technology Solutions</p>
+          <span class="area-status">Active</span>
+        </div>
+        <p class="area-desc">Applied technology and digital tools for public-service delivery and organisational efficiency.</p>
+      </div>
+      <div class="area">
+        <div class="area-header">
+          <p class="area-name">Healthcare</p>
+          <span class="area-status">Forthcoming</span>
+        </div>
+        <p class="area-desc">Access, delivery, and workforce sustainability in public healthcare.</p>
+      </div>
+      <div class="area">
+        <div class="area-header">
+          <p class="area-name">Housing</p>
+          <span class="area-status">Forthcoming</span>
+        </div>
+        <p class="area-desc">Affordability, social housing policy, and tenant protections.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Contact</p>
+    <p class="contact-line"><a class="contact-link" href="mailto:hello@1893macro.com">hello@1893macro.com</a></p>
+  </section>
+
+  <p class="footer">&copy; 2026 1893 Macro</p>
+
+</main>
